@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./container/header/header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ScrollToTop from "../src/container/scroll-up/scrollup";
+import Homepage from "./pages/homepage/homepage";
+import Gallery from "./pages/gallery/gallery";
+import Footer from "./container/footer/footer";
+import Catering from "./pages/catering/catering";
+import Decoration from "./pages/decoration/decoration";
+import Training from "./pages/training/training";
+import Contact from "./pages/contact/contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <div style={{ fontSize: "1.8rem" }}>
+          <ToastContainer />
+        </div>
+        <Switch>
+          <Route path='/' exact component={Homepage} />
+          <Route path='/gallery' component={Gallery} />
+          <Route path='/catering' component={Catering} />
+          <Route path='/decoration' component={Decoration} />
+          <Route path='/training' component={Training} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
+        <Footer/>
+      </Router>
     </div>
   );
 }
