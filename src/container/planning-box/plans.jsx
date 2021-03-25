@@ -10,11 +10,12 @@ const Container = styled.div`
   grid-gap: 0.8rem;
   border-radius: 5px;
   position: relative;
-transition: all .2s cubic-bezier(.17,.67,.83,.67);
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   &:hover {
     transform: scale(1.02);
-          background-color: red;
-    z-index: 1000;  }
+    background-color: black;
+    z-index: 1000;
+  }
 `;
 
 const Div = styled.div`

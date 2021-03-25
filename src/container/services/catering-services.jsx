@@ -34,14 +34,17 @@ const Boxes = styled.div`
 const CateringServices = () => {
   return (
     <Container>
-      <HeadBox section='CATERING' title='Welcome to the Best
-Catering Service' />
+      <HeadBox
+        section="CATERING"
+        title="Welcome to the Best
+Catering Service"
+      />
       <Boxes>
-        <Box image={Img} offer="Food" />
-        <Box image={Img1} offer="Drink" />
+        <Box image={Img} offer="Dishes" />
+        <Box image={Img1} offer="Confectioneries" />
         <Box image={Img2} offer="Snacks" />
       </Boxes>
-      <Btn value='CATERING' center/>
+      <Btn value="CATERING" center />
     </Container>
   );
 };
