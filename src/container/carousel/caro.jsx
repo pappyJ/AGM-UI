@@ -7,6 +7,7 @@ import Slide2 from "./slide2";
 import styled from "styled-components";
 import { DgText, SmText } from "../../constants/style";
 import Btn from "../../components/button/button";
+import { COMPANY_NAME, COMPANY_SLOGAN } from "../../constants/appConstants";
 
 //import { Typography } from "@material-ui/core";
 //import { Link } from "react-router-dom";
@@ -39,7 +40,7 @@ const HeadTitle = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-grid-gap: 2rem;
+  grid-gap: 2rem;
   @media only screen and (max-width: 602px) {
   }
 `;
@@ -54,15 +55,14 @@ export const Caro = () => {
   return (
     <Container>
       <Text>
-          
         <HeadTitle>
-        <DgText
-              style={{  fontWeight: "400", fontSize: "4rem", color: '#fff' }}
-            >
-              Events and Deco
-            </DgText>
-          <SmText white>all i do is win and win no matter what!</SmText>
-          <Btn value='ORDER OUR SERVIVCE' big/>
+          <DgText
+            style={{ fontWeight: "400", fontSize: "4rem", color: "#fff" }}
+          >
+            {COMPANY_NAME}
+          </DgText>
+          <SmText white>{COMPANY_SLOGAN}</SmText>
+          <Btn value="ORDER OUR SERVIVCE" big />
         </HeadTitle>
       </Text>
       <Carou
@@ -71,13 +71,12 @@ export const Caro = () => {
         showThumbs={false}
         showArrows={false}
         infiniteLoop
-       
         swipeable={false}
       >
-        <Slide1 key='content-0' />
-        <Slide2 key='content-1' />
+        <Slide1 key="content-0" />
+        <Slide2 key="content-1" />
 
-        <Slide1 key='content-2' />
+        <Slide1 key="content-2" />
       </Carou>
     </Container>
   );

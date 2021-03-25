@@ -3,13 +3,13 @@ import HeadBox from "../head-box/head-box";
 import styled from "styled-components";
 import Box from "../../components/box/box";
 import Btn from "../../components/button/button";
-//import { LgText } from "../../constants/style";
+import Image from "../../images/bgg.jpg";
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   padding: 1rem 5rem;
   grid-gap: 2.9rem;
-    margin: 2rem 0;
+  margin: 2rem 0;
   @media only screen and (max-width: 802px) {
     padding: 1rem 1rem;
   }
@@ -31,14 +31,17 @@ const Boxes = styled.div`
 const DecoServices = () => {
   return (
     <Container>
-      <HeadBox section='DECORATION' title='Welcome to the Best
-Decoration Service' />
+      <HeadBox
+        section="DECORATION"
+        title="Welcome to the Best
+Decoration Service"
+      />
       <Boxes>
-        <Box />
-        <Box />
-        <Box />
+        <Box image={Image} offer="Marriages" />
+        <Box image={Image} offer="Marriages" />
+        <Box image={Image} offer="Marriages" />
       </Boxes>
-      <Btn value='DECORATION' center/>
+      <Btn value="DECORATION" center />
     </Container>
   );
 };
