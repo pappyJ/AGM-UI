@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 1rem;
 
@@ -26,16 +26,16 @@ const Content = styled.div`
   }
 `;
 
-// const ContentRev = styled.div`
-//   display: grid;
-//   grid-template-columns: min-content 1fr;
-//   align-items: center;
-//   grid-gap: 1rem;
+const ContentRev = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 1rem;
 
-//   @media only screen and (max-width: 850px) {
-//     grid-template-columns: 1fr;
-//   }
-// `;
+  @media only screen and (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+`;
 const WriteUp = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -48,7 +48,7 @@ const WriteUp = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100%;
+  width: 70%;
   height: 70vh;
   object-fit: cover;
 `;
@@ -56,7 +56,10 @@ const Img = styled.img`
 
 // const Offers = styled.div`
 // width: 20%;`;
-const Image = styled.div``;
+const Image = styled.div`
+display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;`;
 
 
 export const PagesBox = ({ title, description, image, alt, offers }) => {
@@ -76,27 +79,19 @@ export const PagesBox = ({ title, description, image, alt, offers }) => {
   );
 };
 
-// export const RevPagesBox = ({ title, description, image, alt, offers }) => {
-//   return (
-//     <Container>
-//       <ContentRev>
-//         <Image>
-//           <Img src={image} alt={alt} />
-//         </Image>
-//         <WriteUp>
-//           <LgText style={{ textAlign: "center" }}>{title}</LgText>
-//           <SmText>{description}</SmText>
-//           <SpBox>
-//             <AllInclusiveIcon
-//               style={{ color: "#03663e", width: "4rem", height: "4rem" }}
-//               checked
-//             />
-//             <Offers>
-//               <MdText bold>{offers}</MdText>
-//             </Offers>
-//           </SpBox>
-//         </WriteUp>
-//       </ContentRev>
-//     </Container>
-//   );
-// };
+export const RevPagesBox = ({ title, description, image, alt, offers }) => {
+  return (
+    <Container>
+      <ContentRev>
+        <Image>
+          <Img src={image} alt={alt} />
+        </Image>
+        <WriteUp style={{ gridColumn: "2/-1"}}>
+          <LgText style={{ textAlign: "center" , color: "#473BF0"}}>{title}</LgText>
+          <SmText>{description}</SmText>
+          
+        </WriteUp>
+      </ContentRev>
+    </Container>
+  );
+};
