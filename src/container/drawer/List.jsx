@@ -7,11 +7,11 @@ import { Link, NavLink } from "react-router-dom";
 import { LgText } from "../../constants/style";
 const Container = styled.div`
   //background: #192734;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
   @media only screen and (max-width: 602px) {
-    padding: 0.2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 0rem 0rem;
   }
 `;
 
@@ -40,10 +40,11 @@ const Linkk = styled(NavLink)`
 `;
 const LinkHome = styled(Link)`
   text-decoration: none;
-  padding: 2rem;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  background-color: #473bf0;
 `;
 
 const ListItems = () => {
@@ -54,7 +55,7 @@ const ListItems = () => {
           style={{
             color: "#FF4000",
             fontWeight: "900",
-            fontSize: "1.8rem",
+            fontSize: "1.6rem",
             fontFamily: "Dancing Script, cursive",
           }}
         >
