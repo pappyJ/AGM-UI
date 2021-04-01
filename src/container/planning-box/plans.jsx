@@ -1,20 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 import { MdText, SmText } from "../../constants/style";
+import AdjustIcon from "@material-ui/icons/Adjust";
+import EmojiNatureIcon from "@material-ui/icons/EmojiNature";
+//import "./style.css"
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  padding: 4.5rem 0.7rem;
+  padding: 0.5rem 0.4rem;
   background: #473bf0;
   grid-gap: 0.8rem;
   border-radius: 5px;
   position: relative;
-transition: all .2s cubic-bezier(.17,.67,.83,.67);
-  &:hover {
-    transform: scale(1.02);
-          background-color: red;
-    z-index: 1000;  }
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  // &:hover {
+  //   transform: scale(1.02);
+  //         background-color: red;
+  //   z-index: 1000;  }
+`;
+const Content = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 1rem 0.7rem;
+  grid-gap: 0.8rem;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  // &:hover {
+  //   transform: scale(1.02);
+  //         background-color: red;
+  //   z-index: 1000;  }
 `;
 
 const Div = styled.div`
@@ -28,15 +45,44 @@ const Div = styled.div`
     width: 6rem;
     position: absolute;
     background-color: #fff;
+    
+    ${Container}:hover & {
+      background-color: orange;
+    }
+  }
+`;
+const Ajust = styled(AdjustIcon)`
+  justify-self: start;
+  color: white;
+  ${Container}:hover & {
+    color: orange;
+  }
+`;
+const Ajustt = styled(AdjustIcon)`
+  justify-self: end;
+  color: white;
+  ${Container}:hover & {
+    color: orange;
+  }
+`;
+const Icon = styled(EmojiNatureIcon)`
+  color: white;
+  ${Container}:hover & {
+    color: orange;
   }
 `;
 
 const Plans = ({ plan, info }) => {
   return (
     <Container>
-      <MdText white>{plan}</MdText>
-      <Div></Div>
-      <SmText white>{info}</SmText>
+      <Ajust style={{ fontSize: "1rem" }} />
+      <Content>
+        <Icon style={{ fontSize: "3rem" }} />
+        <MdText white>{plan}</MdText>
+        <Div></Div>
+        <SmText white>{info}</SmText>
+      </Content>
+      <Ajustt style={{ fontSize: "1rem" }} />
     </Container>
   );
 };

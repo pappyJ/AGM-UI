@@ -1,6 +1,6 @@
 import React from 'react';
 import { BgText, SmText } from '../../constants/style';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 //import { LgText } from "../../constants/style";
 const Container = styled.div`
 padding: 3rem 0rem;
@@ -10,6 +10,17 @@ grid-template-columns: 1fr;
 justify-items: center;
 align-content: center;
 `;
+const blur =keyframes`
+0% {
+  opacity: 0;
+}
+40% {
+  transform: scale(1);
+	}
+	100% {
+    opacity: 1;
+	}
+  `
 const Content = styled.div`
   background-image: url("http://royalevent.themerex.net/wp-content/uploads/2020/11/title_bg_green.png");
   background-position: top center;
@@ -21,6 +32,7 @@ const Content = styled.div`
  justify-items: center;
   align-content: center;
   width: 30vw;
+  animation: ${blur} 4s linear ;
   @media only screen and (max-width: 802px) {
     width: 80vw;
   }
@@ -36,8 +48,10 @@ const Div = styled.div`
     width: 6rem;
     position: absolute;
     background-color: #333333;
+    animation: ${blur} 4s linear ;
   }
 `;
+
 const HeadBox = ({section, title, color}) => {
     return (
         <Container>

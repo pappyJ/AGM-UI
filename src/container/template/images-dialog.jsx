@@ -31,13 +31,9 @@ const GryBtn = styled(Button)`
 `;
 
 export  function Dialogs({ img }) {
-  const [setVisible] = React.useState(false);
   return (
     <Rotate style={{ zIndex: "100" }}>
       <GryBtn
-        onClick={() => {
-          setVisible(true);
-        }}
         color='primary'
       >
         <Rotate>

@@ -4,13 +4,22 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./caro.css";
 import Slide1 from "./slide1";
 import Slide2 from "./slide2";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { DgText, SmText } from "../../constants/style";
 import Btn from "../../components/button/button";
 
 //import { Typography } from "@material-ui/core";
 //import { Link } from "react-router-dom";
-
+const scale =keyframes`
+from {
+  opacity: 0;
+  transform: scale(0);
+}
+	to {
+    opacity: 1;
+    transform: scale(1);
+	}
+  `
 const Container = styled.div`
   background: #192734;
   display: grid;
@@ -31,7 +40,7 @@ const Text = styled.div`
   //justify-items: center;
   font-size: 5rem;
   color: white;
-
+  animation: ${scale} 1s ease ;
   @media only screen and (max-width: 602px) {
   }
 `;

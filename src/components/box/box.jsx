@@ -38,7 +38,7 @@ const ImageBox = styled.div`
 const Text = styled.div`
 position: absolute;
 bottom: 3rem;
-left: -2rem;  
+left: -9rem;  
   grid-row: 1/2;
   grid-column: 1/-1;
   z-index: 10;
@@ -58,13 +58,17 @@ left: -2rem;
     left: 0;
     height: 6rem;
     width: 100%;
-    border-radius: 10px;
-    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 0px;
+    background-color: rgb(0, 0, 0, 0.5);
     opacity: 0.7;
     transition: all .2s ease-out;
+    ${Container}:hover & {
+      background-color: rgb(0, 0, 0, 0.8);
+    }
   }
-  &:hover {
-    align-content: end;
+ 
+  ${Container}:hover & {
+    left: 0rem; 
   }
 `;
 const Bg = styled.div`
@@ -75,15 +79,6 @@ border-radius: 5px;
 
   display: grid;
   grid-template-columns: 1fr;
-transition: all 12s ease-out;
- 
-  &:hover {
-    &::after,
-    &::before {
-      display: none;
-    }
-
-    
   }
 `;
 const Box = ({image, offer}) => {
