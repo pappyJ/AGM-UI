@@ -43,6 +43,9 @@ const ContactBox = ({ color }) => {
     initialValues: {
       email: '',
       name: '',
+      category: '',
+      service: 'none',
+      phone: '',
       keyMessage: '',
     },
 
@@ -52,6 +55,8 @@ const ContactBox = ({ color }) => {
         .required('Email Is Required.'),
 
       name: Yup.string().required('Name Is Required'),
+
+      phone: Yup.string().required('Phone Is Required'),
 
       keyMessage: Yup.string().required('Message Is Required'),
     }),
@@ -90,6 +95,7 @@ const ContactBox = ({ color }) => {
             <ContactCon>
               <TextField
                 label='Name'
+                onChange={formik.handleChange}
                 color={color}
                 {...formik.getFieldProps('name')}
               />
@@ -103,6 +109,7 @@ const ContactBox = ({ color }) => {
             <ContactCon>
               <TextField
                 label='Email'
+                onChange={formik.handleChange}
                 color={color}
                 {...formik.getFieldProps('email')}
               />
@@ -118,12 +125,13 @@ const ContactBox = ({ color }) => {
             <ContactCon>
               <TextField
                 label='Phone'
+                onChange={formik.handleChange}
                 color={color}
-                {...formik.getFieldProps('name')}
+                {...formik.getFieldProps('phone')}
               />
-              {formik.touched.name && formik.errors.name ? (
+              {formik.touched.phone && formik.errors.phone ? (
                 <div style={{ color: 'red', fontSize: '0.7rem' }}>
-                  {formik.errors.name}
+                  {formik.errors.phone}
                 </div>
               ) : null}
             </ContactCon>
@@ -131,12 +139,13 @@ const ContactBox = ({ color }) => {
             <ContactCon>
               <TextField
                 label='Service'
+                onChange={formik.handleChange}
                 color={color}
-                {...formik.getFieldProps('email')}
+                {...formik.getFieldProps('category')}
               />
-              {formik.touched.email && formik.errors.email ? (
+              {formik.touched.category && formik.errors.category ? (
                 <div style={{ color: 'red', fontSize: '0.7rem' }}>
-                  {formik.errors.email}
+                  {formik.errors.category}
                 </div>
               ) : null}
             </ContactCon>

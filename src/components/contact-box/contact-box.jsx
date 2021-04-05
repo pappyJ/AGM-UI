@@ -34,7 +34,7 @@ const Container = styled.div`
   }
 `;
 
-const ContactBox = ({ color }) => {
+const ContactBox = ({ color, category }) => {
   const URL = 'https://jln-ap.herokuapp.com';
 
   const history = useHistory();
@@ -43,6 +43,9 @@ const ContactBox = ({ color }) => {
     initialValues: {
       email: '',
       name: '',
+      phone: '',
+      service: 'none',
+      category,
       keyMessage: '',
     },
 
@@ -52,6 +55,8 @@ const ContactBox = ({ color }) => {
         .required('Email Is Required.'),
 
       name: Yup.string().required('Name Is Required'),
+
+      phone: Yup.string().required('Phone Is Required'),
 
       keyMessage: Yup.string().required('Message Is Required'),
     }),
@@ -91,6 +96,7 @@ Ask a Question'
             <ContactCon>
               <TextField
                 label='Name'
+                onChange={formik.handleChange}
                 color={color}
                 {...formik.getFieldProps('name')}
               />
@@ -104,6 +110,7 @@ Ask a Question'
             <ContactCon>
               <TextField
                 label='Email'
+                onChange={formik.handleChange}
                 color={color}
                 {...formik.getFieldProps('email')}
               />
@@ -113,11 +120,26 @@ Ask a Question'
                 </div>
               ) : null}
             </ContactCon>
+
+            <ContactCon>
+              <TextField
+                label='Phone'
+                onChange={formik.handleChange}
+                color={color}
+                {...formik.getFieldProps('phone')}
+              />
+              {formik.touched.phone && formik.errors.phone ? (
+                <div style={{ color: 'red', fontSize: '0.7rem' }}>
+                  {formik.errors.phone}
+                </div>
+              ) : null}
+            </ContactCon>
           </Div>
 
           <TextField
             label='Message'
             color={color}
+            onChange={formik.handleChange}
             multiline
             rows={4}
             {...formik.getFieldProps('keyMessage')}

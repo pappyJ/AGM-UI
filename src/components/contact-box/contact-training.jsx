@@ -43,6 +43,9 @@ const ContactBox = ({ color }) => {
     initialValues: {
       email: '',
       name: '',
+      phone: '',
+      category: 'training',
+      service: '',
       keyMessage: '',
     },
 
@@ -52,6 +55,8 @@ const ContactBox = ({ color }) => {
         .required('Email Is Required.'),
 
       name: Yup.string().required('Name Is Required'),
+
+      phone: Yup.string().required('Phone Is Required'),
 
       keyMessage: Yup.string().required('Message Is Required'),
     }),
@@ -119,11 +124,11 @@ const ContactBox = ({ color }) => {
               <TextField
                 label='Phone'
                 color={color}
-                {...formik.getFieldProps('name')}
+                {...formik.getFieldProps('phone')}
               />
-              {formik.touched.name && formik.errors.name ? (
+              {formik.touched.phone && formik.errors.phone ? (
                 <div style={{ color: 'red', fontSize: '0.7rem' }}>
-                  {formik.errors.name}
+                  {formik.errors.phone}
                 </div>
               ) : null}
             </ContactCon>
@@ -132,11 +137,11 @@ const ContactBox = ({ color }) => {
               <TextField
                 label='Service Of Intrest'
                 color={color}
-                {...formik.getFieldProps('email')}
+                {...formik.getFieldProps('service')}
               />
-              {formik.touched.email && formik.errors.email ? (
+              {formik.touched.service && formik.errors.service ? (
                 <div style={{ color: 'red', fontSize: '0.7rem' }}>
-                  {formik.errors.email}
+                  {formik.errors.service}
                 </div>
               ) : null}
             </ContactCon>

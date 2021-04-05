@@ -8,26 +8,33 @@ import img from '../../images/bgg.jpg';
 const Training = () => {
   return (
     <div>
-      <LandingBox title="Training" to="Training" currentPage="Training" />
+      <LandingBox title='Training' to='Training' currentPage='Training' />
       <HeadBox
-        section="Training"
-        title="Welcome to the Best
-Training Service"
+        section='Guide'
+        title='Welcome to the Best
+Training Service'
       />
       <PagesBox
-        title="Training"
-        description="lorem how are uo doing yes"
+        title='Event Pro'
+        description='lorem how are uo doing yes'
         image={img}
-        alt="Training department"
+        alt='Training department'
       />
 
       <Divider />
 
       <RevPagesBox
-        title="Training"
-        description="lorem how are uo doing yes"
+        title='Event & Catering'
+        description='lorem how are uo doing yes'
         image={img}
-        alt="Training department"
+        alt='Training department'
+      />
+
+      <PagesBox
+        title='Complete Event Planner'
+        description='lorem how are uo doing yes'
+        image={img}
+        alt='Training department'
       />
       <TrainingBox />
     </div>
