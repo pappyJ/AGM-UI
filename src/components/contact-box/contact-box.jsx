@@ -1,18 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { TextField } from "@material-ui/core";
-import Button from "../button/button";
-import { useFormik } from "formik";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-import * as Yup from "yup";
-import { Alert, TYPE } from "../alert";
-import HeadBox from "../../container/head-box/head-box";
+import React from 'react';
+import styled from 'styled-components';
+import { TextField } from '@material-ui/core';
+import Button from '../button/button';
+import { useFormik } from 'formik';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+import * as Yup from 'yup';
+import { Alert, TYPE } from '../alert';
+import HeadBox from '../../container/head-box/head-box';
 export const ContactCon = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
-
 `;
 export const Div = styled.div`
   display: grid;
@@ -21,7 +20,6 @@ export const Div = styled.div`
 
   @media only screen and (max-width: 700px) {
     grid-template-columns: 1fr;
-
   }
 `;
 
@@ -37,40 +35,40 @@ const Container = styled.div`
 `;
 
 const ContactBox = ({ color }) => {
-  const URL = "https://jln-ap.herokuapp.com";
+  const URL = 'https://jln-ap.herokuapp.com';
 
   const history = useHistory();
 
   const formik = useFormik({
     initialValues: {
-      email: "",
-      name: "",
-      keyMessage: "",
+      email: '',
+      name: '',
+      keyMessage: '',
     },
 
     validationSchema: Yup.object({
       email: Yup.string()
-        .email("Invalid Email Address.")
-        .required("Email Is Required."),
+        .email('Invalid Email Address.')
+        .required('Email Is Required.'),
 
-      name: Yup.string().required("Name Is Required"),
+      name: Yup.string().required('Name Is Required'),
 
-      keyMessage: Yup.string().required("Message Is Required"),
+      keyMessage: Yup.string().required('Message Is Required'),
     }),
 
     onSubmit: (values) => {
       axios
         .post(`${URL}/api/v1/contacts/sendMail`, values)
         .then((res) => {
-          if (res.data.status.toLowerCase() === "success") {
-            console.log("Mail Succesully Sent");
+          if (res.data.status.toLowerCase() === 'success') {
+            console.log('Mail Succesully Sent');
 
             Alert(
               "Feedback Succesully Sent , We'll Get Back To You As Soon As Possiple",
               TYPE.DARK
             );
 
-            return history.push("/");
+            return history.push('/');
           }
         })
         .catch((err) => {
@@ -94,10 +92,10 @@ Ask a Question'
               <TextField
                 label='Name'
                 color={color}
-                {...formik.getFieldProps("name")}
+                {...formik.getFieldProps('name')}
               />
               {formik.touched.name && formik.errors.name ? (
-                <div style={{ color: "red", fontSize: "0.7rem" }}>
+                <div style={{ color: 'red', fontSize: '0.7rem' }}>
                   {formik.errors.name}
                 </div>
               ) : null}
@@ -107,10 +105,10 @@ Ask a Question'
               <TextField
                 label='Email'
                 color={color}
-                {...formik.getFieldProps("email")}
+                {...formik.getFieldProps('email')}
               />
               {formik.touched.email && formik.errors.email ? (
-                <div style={{ color: "red", fontSize: "0.7rem" }}>
+                <div style={{ color: 'red', fontSize: '0.7rem' }}>
                   {formik.errors.email}
                 </div>
               ) : null}
@@ -122,10 +120,10 @@ Ask a Question'
             color={color}
             multiline
             rows={4}
-            {...formik.getFieldProps("keyMessage")}
+            {...formik.getFieldProps('keyMessage')}
           />
           {formik.touched.keyMessage && formik.errors.keyMessage ? (
-            <div style={{ color: "red", fontSize: "0.7rem" }}>
+            <div style={{ color: 'red', fontSize: '0.7rem' }}>
               {formik.errors.keyMessage}
             </div>
           ) : null}

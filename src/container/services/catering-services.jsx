@@ -1,12 +1,11 @@
-import React from "react";
-import HeadBox from "../head-box/head-box";
-import styled from "styled-components";
-import Box from "../../components/box/box";
-import Btn from "../../components/button/button";
-import Img from "../../images/ft.jpg";
-import Img1 from "../../images/ftt.jpg";
-import Img2 from "../../images/fttt.jpg";
-import { MdText } from "../../constants/style";
+import React from 'react';
+import HeadBox from '../head-box/head-box';
+import styled from 'styled-components';
+import Box from '../../components/box/box';
+import Btn from '../../components/button/button';
+import Img1 from '../../images/food/food5.jpeg';
+import Img2 from '../../images/food/food3.jpeg';
+import { MdText } from '../../constants/style';
 //import { LgText } from "../../constants/style";
 const Container = styled.div`
   display: grid;
@@ -36,22 +35,27 @@ const CateringServices = () => {
   return (
     <Container>
       <HeadBox
-        section="CATERING"
-        title="Welcome to the Best
-Catering Service"
+        section='CATERING'
+        title='Welcome to the Best
+Catering Service'
       />
-      <MdText style={{ textAlign: "center" }}>
+      <MdText style={{ textAlign: 'center' }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsa
         consectetur nemo provident accusantium, cupiditate, quisquam maxime
         incidunt expedita ad omnis fugiat suscipit earum autem totam hic magni,
         iusto itaque?
       </MdText>
       <Boxes>
-        <Box image={Img} offer="Food" />
-        <Box image={Img1} offer="Drink" />
-        <Box image={Img2} offer="Snacks" />
+        <Box
+          image={
+            'https://cdn.modernghana.com/story_/1024/728/810201822437_02bbafricanbuffetbarandplates.jpg'
+          }
+          offer='Food'
+        />
+        <Box image={Img1} offer='Drink' />
+        <Box image={Img2} offer='Snacks' />
       </Boxes>
-      <Btn value="CATERING" center />
+      <Btn value='CATERING' center />
     </Container>
   );
 };

@@ -34,9 +34,9 @@ const DecoServices = () => {
   return (
     <Container>
       <HeadBox
-        section="DECORATION"
-        title="Welcome to the Best
-Decoration Service"
+        section='DECORATION'
+        title='Welcome to the Best
+Decoration Service'
       />
       <MdText style={{ textAlign: 'center' }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsa
@@ -45,11 +45,26 @@ Decoration Service"
         iusto itaque?
       </MdText>
       <Boxes>
-        <Box image={Image} offer="Marriages" />
-        <Box image={Image} offer="Burials" />
-        <Box image={Image} offer="Dedications" />
+        <Box
+          image={
+            'https://www.bellanaijaweddings.com/wp-content/uploads/2019/02/Amanda-Sydney-BellaNaija-Weddings-94-1080x1350.jpg'
+          }
+          offer='Marriages'
+        />
+        <Box
+          image={
+            'https://cdn.britannica.com/34/180534-131-42E31460/candles-cemetery-All-Saints-Day.jpg'
+          }
+          offer='Burials'
+        />
+        <Box
+          image={
+            'https://www.tori.ng/userfiles/thumb/2018/mar/19/bb/b_91502.jpg'
+          }
+          offer='Dedications'
+        />
       </Boxes>
-      <Btn value="DECORATION" center />
+      <Btn value='DECORATION' center />
     </Container>
   );
 };

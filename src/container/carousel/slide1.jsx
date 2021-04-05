@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Img from "../../images/wpp.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import Img from '../../images/events/event10.jpeg';
 //import { LgText } from "../../constants/style";
 
 const Container = styled.div`
-  background-image: url(${Img});
+  background-image: url('https://rentyourhall.com/upload/hall/IMG_20160609_110705_copy.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,7 @@ const Content = styled.div`
   background-color: rgb(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 1fr;
- justify-content: center;
+  justify-content: center;
   align-content: center;
 `;
 
@@ -29,9 +29,7 @@ const Content = styled.div`
 const Slide1 = () => {
   return (
     <Container>
-      <Content>
-       
-      </Content>
+      <Content></Content>
     </Container>
   );
 };
