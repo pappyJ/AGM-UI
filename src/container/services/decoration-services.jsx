@@ -1,9 +1,10 @@
-import React from "react";
-import HeadBox from "../head-box/head-box";
-import styled from "styled-components";
-import Box from "../../components/box/box";
-import Btn from "../../components/button/button";
-import { MdText } from "../../constants/style";
+import React from 'react';
+import HeadBox from '../head-box/head-box';
+import styled from 'styled-components';
+import Box from '../../components/box/box';
+import Btn from '../../components/button/button';
+import { MdText } from '../../constants/style';
+import Image from '../../images/4k_Uhd_Motherboard_-9a2c0851-14b1-4f37-a9a0-27d9d955225f.jpg';
 //import { LgText } from "../../constants/style";
 const Container = styled.div`
   display: grid;
@@ -37,7 +38,7 @@ const DecoServices = () => {
         title="Welcome to the Best
 Decoration Service"
       />
-      <MdText style={{ textAlign: "center" }}>
+      <MdText style={{ textAlign: 'center' }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsa
         consectetur nemo provident accusantium, cupiditate, quisquam maxime
         incidunt expedita ad omnis fugiat suscipit earum autem totam hic magni,
@@ -45,8 +46,8 @@ Decoration Service"
       </MdText>
       <Boxes>
         <Box image={Image} offer="Marriages" />
-        <Box image={Image} offer="Marriages" />
-        <Box image={Image} offer="Marriages" />
+        <Box image={Image} offer="Burials" />
+        <Box image={Image} offer="Dedications" />
       </Boxes>
       <Btn value="DECORATION" center />
     </Container>

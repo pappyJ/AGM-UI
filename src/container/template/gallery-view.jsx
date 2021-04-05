@@ -1,7 +1,7 @@
 import React from 'react';
-import {DialogView} from "./images-dialog"
-import styled from "styled-components";
-import img from "../../images/ft.jpg";
+import { DialogView } from './images-dialog';
+import styled from 'styled-components';
+import img from '../../images/ft.jpg';
 import HeadBox from '../head-box/head-box';
 // const rotate =keyframes`
 // 	0% {
@@ -27,22 +27,22 @@ const Container = styled.div`
   }
   @media only screen and (max-width: 700px) {
     grid-template-columns: 1fr;
-  }`
+  }
+`;
 const GalleryView = () => {
-    return (
-        <div>
-            <HeadBox
+  return (
+    <div>
+      <HeadBox
         section='Our project'
         title='Reach Us Through Any Suitable Medium'
       />
-            <Container>
-                <DialogView img={img} about="cooking for the wedding"/>
-          <DialogView img={img} about="cooking for the wedding" />
-          <DialogView img={img} about="cooking for the wedding" />
-          
-            </Container>
-        </div>
-    );
+      <Container>
+        <DialogView img={img} about='cooking for the wedding' />
+        <DialogView img={img} about='cooking for the wedding' />
+        <DialogView img={img} about='cooking for the wedding' />
+      </Container>
+    </div>
+  );
 };
 
 export default GalleryView;
