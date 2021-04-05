@@ -13,6 +13,7 @@ import Training from "./pages/training/training";
 import Contact from "./pages/contact/contact";
 import LoaderBox from "../src/components/Loader/loader";
 import { useEffect, useState } from "react";
+import GalleryView from "./container/template/gallery-view";
 
 function App() {
   const [Loading, setLoading] = useState(true);
@@ -36,12 +37,13 @@ function App() {
             <ToastContainer />
           </div>
           <Switch>
+            <Route path="/" exact component={Homepage} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/gallery-view" component={GalleryView} />
             <Route path="/catering" component={Catering} />
             <Route path="/decoration" component={Decoration} />
             <Route path="/training" component={Training} />
             <Route path="/contact" component={Contact} />
-            <Route path="/" exact component={Homepage} />
           </Switch>
           <Footer />
         </Router>

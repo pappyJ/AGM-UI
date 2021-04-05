@@ -7,11 +7,12 @@ import { DgText } from "../../constants/style";
 
 const Container = styled.div`
 border-radius: 5px;
-  overflow: hidden;`
+  overflow: hidden;
+  position: relative;`
 
 const rotate =keyframes`
 0% {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 40% {
   transform: scale(1);
@@ -24,9 +25,9 @@ const rotate =keyframes`
     height: 60vh;
     width: 100%;
     border-radius: 5px;
-    animation: ${rotate} 4s linear infinite;
+    
     &:hover {
-    animation : none;
+      animation: ${rotate} 4s linear infinite;
   }
   `;
 const ImageBox = styled.div`
@@ -35,10 +36,13 @@ const ImageBox = styled.div`
   border-radius: 5px;
 `;
 const Text = styled.div`
+position: absolute;
+bottom: 3rem;
+left: -2rem;  
   grid-row: 1/2;
   grid-column: 1/-1;
   z-index: 10;
-  height: 100%;
+  height: 6rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -46,6 +50,19 @@ const Text = styled.div`
   align-content: center;
   border-radius: 5px;
   transition: all .6s cubic-bezier(.17,.67,.83,.67);
+   &::after,
+  &::before {
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, 0.3);
+    opacity: 0.7;
+    transition: all .2s ease-out;
+  }
   &:hover {
     align-content: end;
   }
@@ -59,18 +76,7 @@ border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr;
 transition: all 12s ease-out;
-  &::after,
-  &::before {
-    content: ""; // ::before and ::after both require content
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 60vh;
-    width: 100%;
-    background-color: rgb(0, 0, 0, 0.3);
-    opacity: 0.7;
-    transition: all .2s ease-out;
-  }
+ 
   &:hover {
     &::after,
     &::before {

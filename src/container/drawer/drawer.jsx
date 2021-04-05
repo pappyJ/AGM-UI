@@ -23,6 +23,12 @@ const useStyles = makeStyles({
   },
   fullList: {
     width: 'auto',
+  },
+  pad: {
+
+    "&.MuiList-padding": {
+      padding: "0"
+    }
   }
 });
 
@@ -64,7 +70,7 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-          <List>
+          <List className={classes.pad}>
              
         <ListItems/>
             

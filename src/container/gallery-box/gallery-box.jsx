@@ -5,7 +5,7 @@ import img2 from "../../images/wp.png";
 
 import HeadBox from "../head-box/head-box";
 import styled from "styled-components";
-import Dialogs from "../template/images-dialog";
+import {Dialogs} from "../template/images-dialog";
 import Btn from "../../components/button/button";
 const Container = styled.div`
 
@@ -32,9 +32,9 @@ Projects' />
       <Content>
         <Dialogs img={img3}/>
         <Dialogs img={img}/>
-       <div>
+    
        <Dialogs img={img2} />
-       </div>
+
         <Dialogs img={img3}/>
         <Dialogs img={img2}/>
         <Dialogs img={img}/>
