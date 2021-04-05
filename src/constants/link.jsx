@@ -16,7 +16,7 @@ const Linkk = styled(NavLink)`
 
   &:hover,
   &:active{
-    border-bottom: solid 2px #fff;
+    font-weight: 600;
   }
   @media only screen and (max-width: 900px) {
     font-size: 1.2rem;

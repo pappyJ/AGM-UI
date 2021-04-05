@@ -1,6 +1,7 @@
-import React from 'react';
-import Loader from "react-loader-spinner";
-import styled from "styled-components";
+import React, {useState} from 'react';
+import styled, {css} from "styled-components";
+
+import RiseLoader from "react-spinners/RiseLoader";
 
 const Container = styled.div`
 display: grid;
@@ -9,7 +10,7 @@ justify-items: center;
 align-items: center;
 width: 100%;
 height:100vh;
-background: #fff;
+background: #473bf0;
 position: relative;
 
 
@@ -23,18 +24,20 @@ position: relative;
   opacity: 0;
 }
 `;
-
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const LoaderBox = () => {
+  let [color] = useState("#fff");
+
     return (
         <Container>
-              <Loader
-        type="Rings"
-        color="#473bf0"
-        height={100}
-        width={100}
-       
-      />
+              
+         <RiseLoader color={color} loading={true} css={override} size={15} />
+  
         </Container>
     );
 };

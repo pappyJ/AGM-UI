@@ -14,7 +14,7 @@ const Container = styled.div`
 const Content = styled.div`
   height: 90vh;
   width: 100%;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 1fr;
  justify-content: center;

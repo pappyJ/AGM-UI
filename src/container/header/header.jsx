@@ -2,14 +2,39 @@ import React from "react";
 import Ltxt from "../../constants/link";
 import { DgText } from "../../constants/style";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import TemporaryDrawer from "../drawer/drawer";
 import { AppBar } from "@material-ui/core";
 import { COMPANY_NAME } from "../../constants/appConstants";
 
+const blur =keyframes`
+0% {
+  opacity: 0;
+  transform: translateX(-12rem);
+}
+40% {
+  transform: scale(1);
+	}
+	100% {
+    opacity: 1;
+    transform: translateX(0);
+	}
+  `
+  const right =keyframes`
+from {
+  opacity: 0;
+  transform: translateX(12rem);
+}
+	to {
+    opacity: 1;
+    transform: translateX(0);
+	}
+  `
+
 const Linkk = styled(Link)`
   padding: 0.5rem 1rem;
   text-decoration: none;
+  animation: ${blur} 1s ease-in ;
   @media only screen and (max-width: 700px) {
     padding: 0.5rem 0.5rem;
   }
@@ -32,6 +57,7 @@ const Navs = styled.div`
   grid-template-columns: repeat(7, max-content);
   justify-content: space-between;
   grid-gap: 1.5rem;
+  animation: ${right} 1s ease-in ;
   @media only screen and (max-width: 905px) {
     display: none;
     padding: 0rem 1rem;

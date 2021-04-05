@@ -26,6 +26,7 @@ const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
   }`
 const GalleryView = () => {
     return (
@@ -36,11 +37,9 @@ const GalleryView = () => {
       />
             <Container>
                 <DialogView img={img} about="cooking for the wedding"/>
-                <DialogView />
-                <DialogView />
-                <DialogView />
-                <DialogView />
-                <DialogView/>
+          <DialogView img={img} about="cooking for the wedding" />
+          <DialogView img={img} about="cooking for the wedding" />
+          
             </Container>
         </div>
     );

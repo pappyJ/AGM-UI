@@ -39,19 +39,6 @@ const ContactBox = styled.div`
   @media only screen and (max-width: 600px) {
   }
 `;
-const Div = styled.div`
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  &::before {
-    content: "";
-    height: 2px;
-    width: 6rem;
-    position: absolute;
-    background-color: #333333;
-  }
-`;
 const Icon = styled.img`
   height: 4rem;
 `;
@@ -64,7 +51,7 @@ const Contacts = () => {
         <ContactBox>
           <Icon src={Location} alt="reach us" />
           <MdText bold>Locate Us</MdText>
-         <Div></Div>
+       
           <>
             <SmText center>OFFICE: {contactContext.contact.address}</SmText>
             <SmText center>Farm Estate: Owerri Industrial Estate</SmText>
@@ -73,7 +60,6 @@ const Contacts = () => {
         <ContactBox>
           <Icon src={Call} alt="call us" />
           <MdText bold>Contact Us</MdText>
-          <Div></Div>
           {contactContext.contact.phone.map((item, index) => (
             <SmText key={index} center>{item}</SmText>
           ))}
@@ -81,7 +67,6 @@ const Contacts = () => {
         <ContactBox>
         <Icon src={Email} alt="Email us" />
            <MdText bold>Email Us</MdText>
-           <Div></Div>
           {contactContext.contact.email.map((item, index) => (
             <SmText key={index} center>{item}</SmText>
           ))}
