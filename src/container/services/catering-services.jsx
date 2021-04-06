@@ -18,7 +18,6 @@ const Container = styled.div`
   margin: 2rem 0;
   @media only screen and (max-width: 802px) {
     padding: 1rem 1rem;
-
   }
   @media only screen and (max-width: 902px) {
     grid-gap: 1rem;
@@ -30,9 +29,9 @@ export const Content = styled.div`
   align-items: center;
   margin: 2rem 0;
   @media only screen and (max-width: 902px) {
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
-  `
+`;
 const CateringServices = () => {
   return (
     <Container>
@@ -42,25 +41,24 @@ const CateringServices = () => {
 Catering Service'
       />
       <Content>
-      <MdText style={{ textAlign: 'center' }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsa
-        consectetur nemo provident accusantium, cupiditate, quisquam maxime
-        incidunt expedita ad omnis fugiat suscipit earum autem totam hic magni,
-        iusto itaque?
-      </MdText>
-     
+        <MdText style={{ textAlign: 'center' }}>
+          Sample Catering Services is the premier catering and events company of
+          choice in Nigeria. We create remarkable experiences by offering the
+          finest quality foods and providing unsurpassed personalized service,
+          driven by our passion for life’s special occasions.
+        </MdText>
+
         <Box
           image1={Img1}
           image2={Img2}
           image3={Img3}
-          offer1="Snack"
-          offer2="Food"
-          offer3="Cake"
+          offer1='Snack'
+          offer2='Food'
+          offer3='Cake'
         />
-      
       </Content>
-      <Link to="/catering" style={{textDecoration: "none"}}>
-      <Btn value={<ArrowRightAltIcon style={{ color: "white" }}/>} center />
+      <Link to='/catering' style={{ textDecoration: 'none' }}>
+        <Btn value={<ArrowRightAltIcon style={{ color: 'white' }} />} center />
       </Link>
     </Container>
   );
