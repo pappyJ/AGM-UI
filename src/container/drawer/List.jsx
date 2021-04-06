@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Divider from "@material-ui/core/Divider";
+import React from 'react';
+import styled from 'styled-components';
+import Divider from '@material-ui/core/Divider';
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from 'react-router-dom';
 
-import { LgText } from "../../constants/style";
+import { LgText } from '../../constants/style';
 const Container = styled.div`
   //background: #192734;
   @media only screen and (max-width: 602px) {
@@ -16,18 +16,18 @@ const Container = styled.div`
 `;
 
 const Linkk = styled(NavLink)`
-  color: #473BF0;
+  color: #473bf0;
   text-decoration: none;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-style: normal;
-  font-weight: ${(props) => (props.bold ? "bold" : "400")};
+  font-weight: ${(props) => (props.bold ? 'bold' : '400')};
   font-size: 3rem;
   line-height: 22px;
   cursor: pointer;
   padding: 0.8rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
- 
+
   justify-items: center;
   @media only screen and (max-width: 900px) {
     font-size: 1.2rem;
@@ -45,8 +45,8 @@ const LinkHome = styled(Link)`
   grid-template-columns: 1fr;
   justify-items: center;
   background-color: #473bf0;
-  background: -webkit-linear-gradient(  #66A3E1, #473BF0);
-  background: linear-gradient(  #66A3E1, #473BF0);
+  background: -webkit-linear-gradient(#66a3e1, #473bf0);
+  background: linear-gradient(#66a3e1, #473bf0);
 `;
 
 const ListItems = () => {
@@ -55,19 +55,21 @@ const ListItems = () => {
       <LinkHome to='/'>
         <LgText
           style={{
-            color: "orange",
-            fontWeight: "900",
-            fontSize: "1.6rem",
-            fontFamily: "Dancing Script, cursive",
+            color: 'orange',
+            fontWeight: '900',
+            fontSize: '1.6rem',
+            fontFamily: 'Dancing Script, cursive',
           }}
         >
-          Sample<br />
+          Sample
+          <br />
           Catering
-          <br />Services
+          <br />
+          Services
         </LgText>
       </LinkHome>
       <Divider />
-      <Linkk to='/Home'>Home</Linkk>
+      <Linkk to='/'>Home</Linkk>
       <Divider />
       <Linkk to='/catering'>Catering</Linkk>
       <Divider />

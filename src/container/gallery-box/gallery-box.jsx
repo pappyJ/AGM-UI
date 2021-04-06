@@ -32,9 +32,21 @@ const Imgvw = () => {
 Projects'
       />
       <Content>
-        <Dialogs img={img3} />
-        <Dialogs img={img2} />
-        <Dialogs img={img} />
+        <Dialogs
+          img={
+            'https://image.shutterstock.com/image-photo/wedding-flowers-decoration-restaurant-260nw-252002350.jpg'
+          }
+        />
+        <Dialogs
+          img={
+            'https://image.shutterstock.com/image-photo/beautiful-wedding-ceremony-event-garden-600w-372069916.jpg'
+          }
+        />
+        <Dialogs
+          img={
+            'https://www.bookmyballoons.in/wp-content/uploads/2019/03/birthday-party-organisers-in-bangalore.jpg'
+          }
+        />
       </Content>
       <Btn value='GALLERY' center />
     </Container>

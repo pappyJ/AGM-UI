@@ -1,11 +1,11 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import { Card, CardContent, CardMedia } from "@material-ui/core";
-import Viewer from "react-viewer";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import { Card, CardContent, CardMedia } from '@material-ui/core';
+import Viewer from 'react-viewer';
 
-import styled from "styled-components";
-import { SmText } from "../../constants/style";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { SmText } from '../../constants/style';
+import { Link } from 'react-router-dom';
 // const rotate = keyframes`
 // 	0% {
 // 		background: white;
@@ -19,7 +19,6 @@ import { Link } from "react-router-dom";
 // `;
 const Rotate = styled.div`
   &:hover {
-   
   }
 `;
 
@@ -30,14 +29,12 @@ const GryBtn = styled(Button)`
   }
 `;
 
-export  function Dialogs({ img }) {
+export function Dialogs({ img }) {
   return (
-    <Rotate style={{ zIndex: "100" }}>
-      <GryBtn
-        color='primary'
-      >
+    <Rotate style={{ zIndex: '100' }}>
+      <GryBtn color='primary'>
         <Rotate>
-          <Link to='/gallery-view' style={{textDecoration: "none"}}>
+          <Link to='/gallery-view' style={{ textDecoration: 'none' }}>
             <Card>
               <CardMedia
                 component='img'
@@ -48,7 +45,7 @@ export  function Dialogs({ img }) {
                 borderRaduis={2}
               />
               <CardContent>
-                <SmText>wedding at odinegwe</SmText>
+                <SmText>Highlights Of Our Past Projects</SmText>
               </CardContent>
             </Card>
           </Link>
@@ -56,12 +53,12 @@ export  function Dialogs({ img }) {
       </GryBtn>
     </Rotate>
   );
-};
+}
 // with dialog
-export  function DialogView({ img, about }) {
+export function DialogView({ img, about }) {
   const [visible, setVisible] = React.useState(false);
   return (
-    <Rotate style={{ zIndex: "100" }}>
+    <Rotate style={{ zIndex: '100' }}>
       <GryBtn
         onClick={() => {
           setVisible(true);
@@ -69,44 +66,42 @@ export  function DialogView({ img, about }) {
         color='primary'
       >
         <Rotate>
-        
-            <Card>
-              <CardMedia
-                component='img'
-                alt='our project'
-                height='250'
-                image={img}
-                title='Our project'
-                borderRaduis={2}
-              />
-              <CardContent>
-                <SmText>{about}</SmText>
-              </CardContent>
-            </Card>
-        
+          <Card>
+            <CardMedia
+              component='img'
+              alt='our project'
+              height='250'
+              image={img}
+              title='Our project'
+              borderRaduis={2}
+            />
+            <CardContent>
+              <SmText>{about}</SmText>
+            </CardContent>
+          </Card>
         </Rotate>
       </GryBtn>
 
       <Viewer
-       visible={visible}
-       noFooter
-       attribute
-       downloadable
-       disableMouseZoom
+        visible={visible}
+        noFooter
+        attribute
+        downloadable
+        disableMouseZoom
         zIndex={7000}
         onMaskClick={() => {
           setVisible(false);
         }}
-       onClose={() => {
-         setVisible(false);
-       }}
-       images={[
-         {
-           src: `${img}` ,
-           alt: "okigwe birhday ",
-         },
-       ]}
-     />
+        onClose={() => {
+          setVisible(false);
+        }}
+        images={[
+          {
+            src: `${img}`,
+            alt: 'okigwe birhday ',
+          },
+        ]}
+      />
     </Rotate>
   );
-};
+}
