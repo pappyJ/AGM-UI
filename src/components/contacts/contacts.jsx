@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
-import styled from "styled-components";
-import { MdText, SmText } from "../../constants/style";
-import { ContactProvider } from "../../utils/contactContext";
-import Call from '../../images/cl.png'
-import Email from '../../images/em.png'
-import Location from '../../images/lc.png'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { MdText, SmText } from '../../constants/style';
+import Call from '../../images/cl.png';
+import Email from '../../images/em.png';
+import Location from '../../images/lc.png';
+import fb from '../../images/fb.svg';
+import inst from '../../images/insta.svg';
+import ws from '../../images/wa.svg';
 
 const Container = styled.div`
   display: grid;
@@ -42,34 +44,53 @@ const ContactBox = styled.div`
 const Icon = styled.img`
   height: 4rem;
 `;
-const Contacts = () => {
-  const contactContext = useContext(ContactProvider());
 
+const SocialLink = styled.a`
+  text-align: center;
+  text-decoration: none;
+`;
+
+const Contacts = () => {
   return (
     <Container>
       <ReachUs>
         <ContactBox>
-          <Icon src={Location} alt="reach us" />
+          <Icon src={Location} alt='reach us' />
           <MdText bold>Locate Us</MdText>
-       
+
           <>
-            <SmText center>OFFICE: {contactContext.contact.address}</SmText>
-            <SmText center>Farm Estate: Owerri Industrial Estate</SmText>
+            <SmText center>HEAD OFFICE: #92 porthacourt Rd Aba </SmText>
           </>
         </ContactBox>
         <ContactBox>
-          <Icon src={Call} alt="call us" />
-          <MdText bold>Contact Us</MdText>
-          {contactContext.contact.phone.map((item, index) => (
-            <SmText key={index} center>{item}</SmText>
-          ))}
+          <Icon src={Call} alt='call / sms' />
+          <MdText bold>Contact / SMS</MdText>
+          <SmText center>+234 816 861 6822</SmText>
+          <SmText center>+234 816 296 0808</SmText>
         </ContactBox>
         <ContactBox>
-        <Icon src={Email} alt="Email us" />
-           <MdText bold>Email Us</MdText>
-          {contactContext.contact.email.map((item, index) => (
-            <SmText key={index} center>{item}</SmText>
-          ))}
+          <Icon src={Email} alt='Email us' />
+          <MdText bold>Email Us</MdText>
+          <SmText center>Ifeomaraphael@gmail.com</SmText>
+        </ContactBox>
+      </ReachUs>
+      <ReachUs>
+        <ContactBox>
+          <Icon src={ws} alt='reach us' />
+          <MdText bold>whatsapp Us</MdText>
+
+          <>
+            <SmText center>+234 816 861 6822</SmText>
+          </>
+        </ContactBox>
+        <ContactBox>
+          <Icon src={fb} alt='call us' />
+          <MdText bold>Contact Us facebook via</MdText>
+          <>
+            <SocialLink href='https://web.facebook.com/agathaifeoma.raphael.5'>
+              <SmText center>Sample Catering Services</SmText>
+            </SocialLink>
+          </>
         </ContactBox>
       </ReachUs>
     </Container>
