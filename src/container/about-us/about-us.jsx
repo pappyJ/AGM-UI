@@ -1,13 +1,14 @@
-
-import React from "react";
-import styled from "styled-components";
-import Btn from "../../components/button/button";
-import { LgText, MdText } from "../../constants/style";
-import Img from "../../images/abt.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Btn from '../../components/button/button';
+import { LgText, MdText, SmText } from '../../constants/style';
+import Img from '../../images/abt.jpg';
 //import { LgText } from "../../constants/style";
 
 const Container = styled.div`
-margin-top: 2rem ;`;
+  margin-top: 2rem;
+`;
 const Image = styled.img`
   height: 80vh;
   width: 100%;
@@ -39,7 +40,7 @@ const Bg = styled.div`
 
   &::after,
   &::before {
-    content: ""; // ::before and ::after both require content
+    content: ''; // ::before and ::after both require content
     position: absolute;
     top: 0;
     left: 0;
@@ -48,19 +49,34 @@ const Bg = styled.div`
     background-color: rgb(0, 0, 0, 0.3);
     opacity: 0.7;
   }
-
+`;
+const Buttons = styled.div`
+display: grid;
+grid-template-columns: repeat(3, max-content);
+align-items: center;
+grid-gap: .8rem;
 `;
 const AboutUs = () => {
   return (
     <Container>
       <Bg>
-              <Text>
-                  <MdText white bold>BOOK TODAY!</MdText>
-          <LgText white style={{ zIndex: "100", textAlign: 'center' }}>
-                      Book Your Tasting Session
-                      or <br/>Discuss  Your Project
+        <Text>
+          <MdText white bold>
+            BOOK TODAY!
+          </MdText>
+          <LgText white style={{ zIndex: '100', textAlign: 'center' }}>
+            Book Your Tasting Session or <br />
+            Discuss Your Project
           </LgText>
-                  <Btn value='BOOK US' />
+          <Buttons>
+            <Link to='/contact' style={{ textDecoration: "none"}}>
+              <Btn value='BOOK US' />
+            </Link>
+            <SmText white >OR</SmText>
+            <Link to='/rental' style={{ textDecoration: "none"}}>
+              <Btn value='RENT' />
+            </Link>
+          </Buttons>
         </Text>
         <ImageBox>
           <Image src={Img} title='service' />

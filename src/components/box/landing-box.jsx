@@ -20,7 +20,7 @@ const Container = styled.div`
 const Bg = styled.div`
   height: 50vh;
   width: 100%;
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: rgb(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: max-content;
   grid-template-rows: min-content min-content;

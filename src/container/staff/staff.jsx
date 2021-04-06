@@ -4,8 +4,8 @@ import { CardMedia } from '@material-ui/core';
 import { MdText, SmText } from '../../constants/style';
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
-import fb from '../../images/fbb.svg';
-import wap from '../../images/wap.svg';
+import fb from '../../images/fb.svg';
+import ws from '../../images/wa.svg';
 
 import Img from '../../images/white/wh5.jpg';
 import { Lg } from '../../components/box/pages-box';
@@ -132,7 +132,7 @@ const Staffs = () => {
                 <SocialIcon src={fb} />
               </SocialLink>
               <SocialLink href='L'>
-                <SocialIcon src={wap} />
+                <SocialIcon src={ws} />
               </SocialLink>
             </Legal>
           </Profile>
