@@ -4,6 +4,7 @@ import Call from '../../images/cl.png';
 import Email from '../../images/em.png';
 import Location from '../../images/lc.png';
 import fb from '../../images/fb.svg';
+import inst from '../../images/insta.svg';
 import ws from '../../images/wa.svg';
 
 const Container = styled.div`
@@ -83,7 +84,16 @@ const Contacts = () => {
         </ContactBox>
         <ContactBox>
           <Icon src={fb} alt='call us' />
-          <MdText bold>Contact Us facebook via</MdText>
+          <MdText bold>Locate Us On facebook via</MdText>
+          <>
+            <SocialLink href='https://web.facebook.com/agathaifeoma.raphael.5'>
+              <SmText center>Sample Catering Services</SmText>
+            </SocialLink>
+          </>
+        </ContactBox>
+        <ContactBox>
+          <Icon src={inst} alt='call us' />
+          <MdText bold>Locate Us On instagram via</MdText>
           <>
             <SocialLink href='https://web.facebook.com/agathaifeoma.raphael.5'>
               <SmText center>Sample Catering Services</SmText>
