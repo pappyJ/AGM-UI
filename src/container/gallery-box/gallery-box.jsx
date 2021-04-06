@@ -33,11 +33,6 @@ Projects'
       />
       <Content>
         <Dialogs img={img3} />
-        <Dialogs img={img} />
-
-        <Dialogs img={img2} />
-
-        <Dialogs img={img3} />
         <Dialogs img={img2} />
         <Dialogs img={img} />
       </Content>

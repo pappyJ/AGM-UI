@@ -1,5 +1,4 @@
 import React from 'react';
-import Img1 from '../../images/ftt.jpg';
 import { CardMedia } from '@material-ui/core';
 import { MdText, SmText } from '../../constants/style';
 import styled from 'styled-components';
@@ -119,13 +118,19 @@ const Staffs = () => {
     <Container>
       <Boxes>
         <Staff>
-          <CardMedia image={Img1} className={classes.img} title='chief chef' />
+          <CardMedia
+            image={
+              'https://scontent.flos3-2.fna.fbcdn.net/v/t1.6435-9/163437955_498810897789306_5419405932388647819_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeGbSdNm2E3V0f1G079B3tbr0BcjZyjXvzTQFyNnKNe_NBJAvBPfVoHwUA7IwwLNwdIb07I-U7SYq1Kqbiwcqz5R&_nc_ohc=IunV6BIVt8YAX8VpO0I&_nc_ht=scontent.flos3-2.fna&oh=f1cb0113e8e3f3fce5427e9099ec38a5&oe=6090876A'
+            }
+            className={classes.img}
+            title='chief chef'
+          />
           <Profile>
             <div style={{ xIndex: '5' }}>
               <MdText bold white>
-                Chef Ngozi
+                Ifeoma Raphael
               </MdText>
-              <SmText white>Cheif chef</SmText>
+              <SmText white>Cheif chef / CEO</SmText>
             </div>
             <Legal>
               <SocialLink href='L'>
@@ -141,10 +146,12 @@ const Staffs = () => {
           <Lg>About Us</Lg>
           <div>
             <SmText>
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              nulla saepe suscipit ullam aperiam, ad cum magnam provident
-              corrupti consequatur minima quae eum eius officiis earum commodi
-              dolorem, sapiente nemo!"
+              " Over the years, Sample Catering Services has built a stellar
+              reputation based on our honest approach to business and unwavering
+              commitment to excellence. We refuse to compromise on quality and
+              our friendly, team-driven culture complements our award-winning
+              food. We’re proud to have earned both the respect of our peers and
+              the continued business of our loyal customers."
             </SmText>
           </div>
         </Text>
