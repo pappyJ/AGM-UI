@@ -39,11 +39,18 @@ const Rental = () => {
         title='Welcome to the Best
 Rental Service'
       />
-      <MdText style={{padding: ".5rem 1rem"}}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde incidunt
-        doloribus ut vero, soluta veniam sint. Quaerat fugiat est ducimus autem
-        dignissimos, reprehenderit quae inventore dolores itaque officiis libero
-        blanditiis!
+      <MdText style={{ padding: '.5rem 1rem' }}>
+        With Sample Catering Services, you’ll never be left searching for a
+        vendor to provide equipment or services for your event. We’ve worked
+        with the finest in the industry and will take care of all the details so
+        you can avoid the hassle of managing multiple providers. Unique rentals
+        can infuse any event with personality and character! . we own a standard
+        inventory of beautiful tables, a variety of event chairs, portable bars,
+        complete service ware, mobile kitchen equipment and more. In addition,
+        our relationships with rental companies throughout Nigeria significantly
+        expand our offerings so we always have just what you’re looking for.
+        Rentals Include: Tenting, tables, seating, flatware, glassware, linens,
+        florals, furniture, gowns, props. Terms & Conditions Applied
       </MdText>
 
       <Divider />
