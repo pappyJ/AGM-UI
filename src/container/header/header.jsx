@@ -49,7 +49,7 @@ const Container = styled.div`
   grid-template-columns: max-content max-content;
   justify-content: space-between;
   align-items: center;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1000px) {
     padding: 0rem 1rem;
   }
 `;
@@ -78,7 +78,8 @@ const Header = () => {
         <Navs>
           <Ltxt to="/" name="Home" />
           <Ltxt to="/catering" name="Catering" />
-          <Ltxt to="/decoration" name="Decoration" />
+            <Ltxt to="/decoration" name="Decoration" />
+            <Ltxt to="/rental" name="Rental" />
           <Ltxt to="/training" name="Training" />
           <Ltxt to="/gallery" name="Gallery" />
           <Ltxt to="/contact" name="Contact Us" />

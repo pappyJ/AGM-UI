@@ -2,7 +2,8 @@ import React from "react";
 import { DgText, SmText } from "../../constants/style";
 import styled from "styled-components";
 import fb from "../../images/fb.svg";
-import insta from "../../images/insta.svg";
+import inst from "../../images/insta.svg";
+import ws from "../../images/wa.svg";
 import wave from "../../images/wave.svg";
 import { COMPANY_NAME } from "../../constants/appConstants";
 
@@ -10,11 +11,11 @@ const Foot = styled.div`
   background-image: url(${wave});
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 3rem 3rem 0rem;
+  padding: 3rem 1rem 0rem;
 `;
 
 const Container = styled.div`
-  padding: 3rem 0rem;
+  padding: 3rem 3rem 0rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -38,7 +39,7 @@ const Content = styled.div`
 `;
 const Legal = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(3, max-content);
   grid-gap: 1rem;
   justify-self: center;
   @media only screen and (max-width: 602px) {
@@ -85,10 +86,13 @@ const Footer = () => {
             <SocialIcon src={fb} />
           </SocialLink>
           <SocialLink href="L">
-            <SocialIcon src={insta} />
+            <SocialIcon src={inst} />
+          </SocialLink>
+          <SocialLink href="L">
+            <SocialIcon src={ws} />
           </SocialLink>
         </Legal>
-        <SmText white> © 2021 {COMPANY_NAME} all rights reserved</SmText>
+        <SmText white center> © 2021 {COMPANY_NAME} all rights reserved</SmText>
       </Container>
     </Foot>
   );

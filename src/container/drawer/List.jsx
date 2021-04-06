@@ -75,6 +75,8 @@ const ListItems = () => {
       <Divider />
       <Linkk to='/decoration'>Decoration</Linkk>
       <Divider />
+      <Linkk to='/rental'>Rental</Linkk>
+      <Divider />
       <Linkk to='/training'>Training</Linkk>
       <Divider />
       <Linkk to='/contact'>Contact Us</Linkk>
