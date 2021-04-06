@@ -130,7 +130,7 @@ const Staffs = () => {
               <MdText bold white>
                 Ifeoma Raphael
               </MdText>
-              <SmText white>Cheif chef / CEO</SmText>
+              <SmText white>Chief chef / CEO</SmText>
             </div>
             <Legal>
               <SocialLink href='https://facebook.com/agathaifeoma.raphael.5'>
