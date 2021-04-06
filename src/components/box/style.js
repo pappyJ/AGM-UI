@@ -5,16 +5,13 @@ export const Container = styled.div`
   grid-template-columns: repeat(3, 20vw);
   grid-template-rows: 30rem;
 
-  @media only screen and (max-width: 902px) {
+  @media only screen and (max-width: 1002px) {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 3rem;
   }
   @media only screen and (max-width: 602px) {
-    grid-template-columns: repeat(3, 31vw);
-    justify-content: space-between;
-  }
-  @media only screen and (max-width: 5  02px) {
     grid-template-columns: 1fr;
+    justify-content: space-between;
   }
 `;
 
@@ -99,7 +96,7 @@ export const ImageBox = styled.div`
 export const Text = styled.div`
   position: absolute;
   bottom: 3rem;
-  left: -9rem;
+  left: -3rem;
   grid-row: 1/2;
   grid-column: 1/-1;
   z-index: 10;
@@ -141,7 +138,7 @@ export const Text = styled.div`
 export const Text1 = styled.div`
   position: absolute;
   bottom: 3rem;
-  left: -9rem;
+  left: -3rem;
   grid-row: 1/2;
   grid-column: 1/-1;
   z-index: 10;
@@ -177,7 +174,7 @@ export const Text1 = styled.div`
 export const Text2 = styled.div`
 position: absolute;
 bottom: 3rem;
-left: -9rem;
+left: -3rem;
 grid-row: 1/2;
 grid-column: 1/-1;
 z-index: 10;

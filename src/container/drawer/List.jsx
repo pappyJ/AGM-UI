@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Linkk = styled(NavLink)`
-  color: gray;
+  color: #473BF0;
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   font-style: normal;
@@ -40,11 +40,13 @@ const Linkk = styled(NavLink)`
 `;
 const LinkHome = styled(Link)`
   text-decoration: none;
-  padding: 3rem 0;
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   background-color: #473bf0;
+  background: -webkit-linear-gradient(  #66A3E1, #473BF0);
+  background: linear-gradient(  #66A3E1, #473BF0);
 `;
 
 const ListItems = () => {
@@ -53,13 +55,15 @@ const ListItems = () => {
       <LinkHome to='/'>
         <LgText
           style={{
-            color: "#FF4000",
+            color: "orange",
             fontWeight: "900",
             fontSize: "1.6rem",
             fontFamily: "Dancing Script, cursive",
           }}
         >
-          Events & Deco
+          Sample<br />
+          Catering
+          <br />Services
         </LgText>
       </LinkHome>
       <Divider />

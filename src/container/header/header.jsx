@@ -6,6 +6,7 @@ import styled, {keyframes} from "styled-components";
 import TemporaryDrawer from "../drawer/drawer";
 import { AppBar } from "@material-ui/core";
 import { COMPANY_NAME } from "../../constants/appConstants";
+import ScrollToColor01 from "./scroll";
 
 const blur =keyframes`
 0% {
@@ -40,7 +41,7 @@ const Linkk = styled(Link)`
   }
 `;
 const Container = styled.div`
-  background-color: #473bf0;
+ // background-color: #473bf0;
   text-decoration: none;
   margin-bottom: 0rem;
   padding: 0.7rem 3rem;
@@ -66,6 +67,7 @@ const Navs = styled.div`
 
 const Header = () => {
   return (
+    <ScrollToColor01> 
     <AppBar>
       <Container>
         <Linkk to="/">
@@ -83,7 +85,8 @@ const Header = () => {
         </Navs>
         <TemporaryDrawer />
       </Container>
-    </AppBar>
+      </AppBar>
+      </ScrollToColor01>
   );
 };
 

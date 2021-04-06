@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import GalleryTemp from '../../container/template/gallery-temp';
 //import Box from "../../components/box/box";
 import axios from 'axios';
+
+import LandingBox from '../../components/box/landing-box';
 import HeadBox from '../../container/head-box/head-box';
 // import { LgText, SmText } from "../../constant/style";
 
 const Container = styled.div`
-  padding-top: 4rem;
+  
 `;
 const Content = styled.div`
   display: grid;
@@ -56,6 +58,8 @@ const Gallery = (props) => {
 
   return (
     <Container>
+      <LandingBox title='Gallery' to='Gallery' currentPage='Gallery' />
+     
       {/* <Box title="Gallery" currentPage="Gallery" linkto="gallery" /> */}
       <HeadBox section="Gallery" title="View our projects" />
       <Content>

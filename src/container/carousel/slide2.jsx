@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "../../images/pg.jpg";
+import Img from "../../images/banners/bannerb.jpg";
 //import { LgText } from "../../constants/style";
 
 const Container = styled.div`

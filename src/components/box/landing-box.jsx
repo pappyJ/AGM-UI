@@ -1,13 +1,13 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Img from "../../images/bgg.jpg";
+import Img from "../../images/banners/bannerb.jpg";
 import { LgText, SmText } from "../../constants/style";
 import styled from "styled-components";
 
 const Container = styled.div`
   background-image: url(${Img});
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;

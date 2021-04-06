@@ -70,7 +70,7 @@ display: grid;
   }
   `;
 
-const Lg = styled(LgText)`
+export const Lg = styled(LgText)`
 text-align: center;
 background: -webkit-linear-gradient(  #FF7700, #473BF0);
   -webkit-background-clip: text;

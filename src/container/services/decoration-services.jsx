@@ -23,7 +23,7 @@ const Container = styled.div`
     padding: 1rem 1rem;
   }
 
-  @media only screen and(max - width: 902px) {
+  @media only screen and(max - width: 1002px) {
       grid-gap: 1rem;
     }
 `;

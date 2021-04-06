@@ -29,7 +29,7 @@ export const Content = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin: 2rem 0;
-  @media only screen and (max-width: 902px) {
+  @media only screen and (max-width: 1002px) {
     grid-template-columns: 1fr ;
   }
   `
