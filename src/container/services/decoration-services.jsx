@@ -35,24 +35,27 @@ const DecoServices = () => {
         section='DECORATION'
         title='Welcome to the Best
 Decoration Service'
-      /> <Content>
-      <MdText style={{ textAlign: 'center' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsa
-          consectetur nemo provident accusantium, cupiditate, quisquam maxime
-          incidunt expedita ad omnis fugiat suscipit earum autem totam hic magni,
-          iusto itaque?
-      </MdText>
-      <Box
+      />{' '}
+      <Content>
+        <MdText style={{ textAlign: 'center' }}>
+          Sample Catering Services , our events aren't just business
+          transactions. We become personally invested and treat you like a
+          member of our family, because for us, it's all about personal
+          connections. Our friendly team's refusal to compromise on quality
+          means you'll get the attention you deserve and your guests will get an
+          experience they won't be able to stop talking about.
+        </MdText>
+        <Box
           image1={Img1}
           image2={Img2}
           image3={Img3}
-          offer1="Meeting"
-          offer2="Event"
-          offer3="Wedding"
+          offer1='Meeting'
+          offer2='Event'
+          offer3='Wedding'
         />
       </Content>
-      <Link to="/decoration" style={{textDecoration: "none"}}>
-      <Btn value={<ArrowRightAltIcon style={{ color: "white" }}/>} center />
+      <Link to='/decoration' style={{ textDecoration: 'none' }}>
+        <Btn value={<ArrowRightAltIcon style={{ color: 'white' }} />} center />
       </Link>
     </Container>
   );
