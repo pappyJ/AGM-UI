@@ -1,11 +1,11 @@
-import React from "react";
-import { DgText, SmText } from "../../constants/style";
-import styled from "styled-components";
-import fb from "../../images/fb.svg";
-import inst from "../../images/insta.svg";
-import ws from "../../images/wa.svg";
-import wave from "../../images/wave.svg";
-import { COMPANY_NAME } from "../../constants/appConstants";
+import React from 'react';
+import { DgText, SmText } from '../../constants/style';
+import styled from 'styled-components';
+import fb from '../../images/fb.svg';
+import inst from '../../images/insta.svg';
+import ws from '../../images/wa.svg';
+import wave from '../../images/wave.svg';
+import { COMPANY_NAME } from '../../constants/appConstants';
 
 const Foot = styled.div`
   background-image: url(${wave});
@@ -23,7 +23,7 @@ const Container = styled.div`
   grid-gap: 2rem;
 `;
 const Content = styled.div`
-  background-image: url("http://royalevent.themerex.net/wp-content/uploads/2020/11/title_bg_green.png");
+  background-image: url('http://royalevent.themerex.net/wp-content/uploads/2020/11/title_bg_green.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -51,7 +51,7 @@ const Div = styled.div`
   grid-template-columns: 1fr;
   justify-items: center;
   &::before {
-    content: "";
+    content: '';
     height: 2px;
     width: 6rem;
     position: absolute;
@@ -69,30 +69,33 @@ const Footer = () => {
       <Container>
         <div>
           <Content>
-            <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
+            <DgText center bold style={{ fontSize: '2rem', color: '#fff' }}>
               {COMPANY_NAME}
             </DgText>
-            <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
+            <DgText center bold style={{ fontSize: '2rem', color: '#fff' }}>
               &
             </DgText>
-            <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
+            <DgText center bold style={{ fontSize: '2rem', color: '#fff' }}>
               Decorations
             </DgText>
           </Content>
           <Div></Div>
         </div>
         <Legal>
-          <SocialLink href="L">
+          <SocialLink href='https://web.facebook.com/agathaifeoma.raphael.5'>
             <SocialIcon src={fb} />
           </SocialLink>
-          <SocialLink href="L">
+          <SocialLink href='https://instagram.com'>
             <SocialIcon src={inst} />
           </SocialLink>
-          <SocialLink href="L">
+          <SocialLink href='https://wa.link/5fyk5e'>
             <SocialIcon src={ws} />
           </SocialLink>
         </Legal>
-        <SmText white center> © 2021 {COMPANY_NAME} all rights reserved</SmText>
+        <SmText white center>
+          {' '}
+          © {new Date().getFullYear()} {COMPANY_NAME} all rights reserved
+        </SmText>
       </Container>
     </Foot>
   );

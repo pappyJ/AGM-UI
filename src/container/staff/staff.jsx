@@ -133,10 +133,10 @@ const Staffs = () => {
               <SmText white>Cheif chef / CEO</SmText>
             </div>
             <Legal>
-              <SocialLink href='L'>
+              <SocialLink href='https://facebook.com/agathaifeoma.raphael.5'>
                 <SocialIcon src={fb} />
               </SocialLink>
-              <SocialLink href='L'>
+              <SocialLink href='https://wa.link/5fyk5e'>
                 <SocialIcon src={ws} />
               </SocialLink>
             </Legal>
