@@ -10,16 +10,11 @@ const Container = styled.div`
   justify-items: center;
   padding: 0.5rem 0.4rem;
   background-color: #004777;
-// background: -webkit-linear-gradient(to top, #F7B53B, #004777 );  /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(to bottom , #F7B53B, #004777 90%); 
   grid-gap: 0.8rem;
   border-radius: 5px;
   position: relative;
   transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  // &:hover {
-  //   transform: scale(1.02);
-  //         background-color: red;
-  //   z-index: 1000;  }
+
 `;
 const Content = styled.div`
   display: grid;
@@ -30,10 +25,6 @@ const Content = styled.div`
   border-radius: 5px;
   position: relative;
   transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  // &:hover {
-  //   transform: scale(1.02);
-  //         background-color: red;
-  //   z-index: 1000;  }
 `;
 
 const Div = styled.div`

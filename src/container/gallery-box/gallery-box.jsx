@@ -7,6 +7,7 @@ import HeadBox from '../head-box/head-box';
 import styled from 'styled-components';
 import { Dialogs } from '../template/images-dialog';
 import Btn from '../../components/button/button';
+import { Link } from 'react-router-dom';
 const Container = styled.div`
   padding: 2rem 0;
 `;
@@ -36,7 +37,10 @@ Projects'
         <Dialogs img={img2} />
         <Dialogs img={img} />
       </Content>
+      <Link to="/gallery" style={{ textDecoration: "none" }}>
+        
       <Btn value='GALLERY' center />
+      </Link>
     </Container>
   );
 };

@@ -84,7 +84,7 @@ const Profile = styled.div`
   grid-template-columns: repeat(2, max-content);
   padding: 0.5rem;
   justify-content: space-between;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.7);
   border-radius: 10px;
 `;
 
