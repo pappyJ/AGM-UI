@@ -3,6 +3,7 @@ import { DialogView } from './images-dialog';
 import styled from 'styled-components';
 import img from '../../images/ft.jpg';
 import HeadBox from '../head-box/head-box';
+import LandingBox from '../../components/box/landing-box';
 // const rotate =keyframes`
 // 	0% {
 // 		filter: grayscale(.8);
@@ -32,9 +33,10 @@ const Container = styled.div`
 const GalleryView = () => {
   return (
     <div>
+      <LandingBox title='Gallery' to='/' currentPage='Home' />
       <HeadBox
-        section='Our project'
-        title='Reach Us Through Any Suitable Medium'
+        section='Gallery'
+        title='Series pictures from this work'
       />
       <Container>
         <DialogView img={img} about='cooking for the wedding' />
