@@ -1,7 +1,4 @@
 import React from 'react';
-import img from '../../images/ft.jpg';
-import img2 from '../../images/wp.png';
-import img3 from '../../images/wpp.jpg';
 
 import HeadBox from '../head-box/head-box';
 import styled from 'styled-components';
@@ -49,9 +46,8 @@ Projects'
           }
         />
       </Content>
-      <Link to="/gallery" style={{ textDecoration: "none" }}>
-        
-      <Btn value='GALLERY' center />
+      <Link to='/gallery' style={{ textDecoration: 'none' }}>
+        <Btn value='GALLERY' center />
       </Link>
     </Container>
   );

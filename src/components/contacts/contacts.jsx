@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { MdText, SmText } from '../../constants/style';
 import Call from '../../images/cl.png';
 import Email from '../../images/em.png';
 import Location from '../../images/lc.png';
 import fb from '../../images/fb.svg';
-import inst from '../../images/insta.svg';
 import ws from '../../images/wa.svg';
 
 const Container = styled.div`
