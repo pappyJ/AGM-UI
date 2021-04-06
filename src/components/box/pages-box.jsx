@@ -61,13 +61,31 @@ display: grid;
   grid-template-columns: 1fr;
   justify-items: center;`;
 
+  const ImageRev = styled.div`
+display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @media only screen and (max-width: 850px) {
+    grid-column: 2/3;
+  }
+  `;
+
+const Lg = styled(LgText)`
+text-align: center;
+background: -webkit-linear-gradient(  #FF7700, #473BF0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  `
+
+
 
 export const PagesBox = ({ title, description, image, alt, offers }) => {
   return (
     <Container>
       <Content>
         <WriteUp>
-          <LgText style={{ textAlign: "center" , color: "#473BF0"}}>{title}</LgText>
+          <Lg >{title}</Lg>
           <SmText>{description}</SmText>
           
         </WriteUp>
@@ -83,11 +101,11 @@ export const RevPagesBox = ({ title, description, image, alt, offers }) => {
   return (
     <Container>
       <ContentRev>
-        <Image>
+        <ImageRev>
           <Img src={image} alt={alt} />
-        </Image>
+        </ImageRev>
         <WriteUp style={{ gridColumn: "2/-1"}}>
-          <LgText style={{ textAlign: "center" , color: "#473BF0"}}>{title}</LgText>
+          <Lg style={{ textAlign: "center" , color: "#473BF0"}}>{title}</Lg>
           <SmText>{description}</SmText>
           
         </WriteUp>

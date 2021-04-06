@@ -15,40 +15,39 @@ import LoaderBox from "../src/components/Loader/loader";
 import { useEffect, useState } from "react";
 import GalleryView from "./container/template/gallery-view";
 
-
 function App() {
   const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5050);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
   return (
-
-    <div className='App'>
+    <div className="App">
       {Loading ? (
         <LoaderBox />
       ) : (
-          <Router>
-            <ScrollToTop />
-            <Header />
-            <div style={{ fontSize: "1.8rem" }}>
-              <ToastContainer />
-            </div>
-            <Switch>
-              <Route path='/' exact component={Homepage} />
-              <Route path='/gallery' component={Gallery} />
-              <Route path='/gallery-view' component={GalleryView} />
-              <Route path='/catering' component={Catering} />
-              <Route path='/decoration' component={Decoration} />
-              <Route path='/training' component={Training} />
-              <Route path='/contact' component={Contact} />
-            </Switch>
-            <Footer />
-          </Router>)}
+        <Router>
+          <ScrollToTop />
+          <Header />
+          <div style={{ fontSize: "1.8rem" }}>
+            <ToastContainer />
+          </div>
+          <Switch>
+            <Route path="/" exact component={Homepage} />
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/gallery-view" component={GalleryView} />
+            <Route path="/catering" component={Catering} />
+            <Route path="/decoration" component={Decoration} />
+            <Route path="/training" component={Training} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+          <Footer />
+        </Router>
+      )}
     </div>
   );
 }

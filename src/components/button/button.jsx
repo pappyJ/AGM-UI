@@ -13,17 +13,22 @@ const CustomButton = styled.button`
   padding: 0.7rem 1.5rem;
   margin: 1rem 0;
   color: #fff;
-
   border: none;
   cursor: pointer;
   font-family: Nunito Sans;
-  background-color: #473bf0;
+  background-color: #FF7700;
+  background: -webkit-linear-gradient(to top, #F7B53B, #FF7700 );  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #F7B53B, #FF7700 ); 
   font-weight: normal;
   font-size: ${(props) => (props.big ? "20px" : "1.2rem")};
   line-height: 30px;
   outline: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 10rem;
+  border-radius: 2px;
 
   @media only screen and (max-width: 1200px) {
     font-size: 18px;

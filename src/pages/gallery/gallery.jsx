@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import {Route } from "react-router-dom";
-import styled from "styled-components";
-import GalleryTemp from "../../container/template/gallery-temp";
+import React, { useEffect, useState } from 'react';
+import { Route } from 'react-router-dom';
+import styled from 'styled-components';
+import GalleryTemp from '../../container/template/gallery-temp';
 //import Box from "../../components/box/box";
-import axios from "axios";
-import HeadBox from "../../container/head-box/head-box";
+import axios from 'axios';
+import HeadBox from '../../container/head-box/head-box';
 // import { LgText, SmText } from "../../constant/style";
 
 const Container = styled.div`
-padding-top: 4rem;`;
+  padding-top: 4rem;
+`;
 const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -21,17 +22,16 @@ const Content = styled.div`
   }
 `;
 
-
 const Gallery = (props) => {
   //const { path } = useRouteMatch();
 
-  const URL = "https://jln-api.herokuapp.com/api/v1/";
+  const URL = 'https://jln-ap.herokuapp.com/api/v1/';
 
   const [business, setBusiness] = useState([
     {
-      name: "agriculture",
-      description: "active",
-      image: "/static/media/picture1.ed0e85f1.png",
+      name: 'agriculture',
+      description: 'active',
+      image: '/static/media/picture1.ed0e85f1.png',
     },
   ]);
 
@@ -43,7 +43,7 @@ const Gallery = (props) => {
         .get(`${URL}businesses`)
 
         .then((res) => {
-          if (res.data.message.toLowerCase() === "success") {
+          if (res.data.message.toLowerCase() === 'success') {
             setBusiness(res.data.businesss.businesss);
           }
         });
@@ -52,12 +52,12 @@ const Gallery = (props) => {
 
   //fake to cancel warning
   const fake = setBusinessUrl;
-  console.log(business, fake)
+  console.log(business, fake);
 
   return (
     <Container>
       {/* <Box title="Gallery" currentPage="Gallery" linkto="gallery" /> */}
-      <HeadBox section='Gallery' title='View our projects' />
+      <HeadBox section="Gallery" title="View our projects" />
       <Content>
         <Route
           path={`/`}

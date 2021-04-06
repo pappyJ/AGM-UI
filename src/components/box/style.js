@@ -175,40 +175,46 @@ export const Text1 = styled.div`
   }
 `;
 export const Text2 = styled.div`
+position: absolute;
+bottom: 3rem;
+left: -9rem;
+grid-row: 1/2;
+grid-column: 1/-1;
+z-index: 10;
+height: 6rem;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr;
+justify-items: center;
+align-content: center;
+border-radius: 5px;
+transition: all 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+&::after,
+&::before {
+  content: ""; // ::before and ::after both require content
   position: absolute;
-  bottom: 3rem;
-  left: -9rem;
-  grid-row: 1/2;
-  grid-column: 1/-1;
-  z-index: 10;
+  top: 0;
+  left: 0;
   height: 6rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-content: center;
-  border-radius: 5px;
-  transition: all 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  &::after,
-  &::before {
-    content: ""; // ::before and ::after both require content
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 6rem;
-    width: 100%;
-    border-radius: 0px;
-    background-color: rgb(0, 0, 0, 0.5);
-    opacity: 0.7;
-    transition: all 0.2s ease-out;
-    ${Content2}:hover & {
-      background-color: rgb(0, 0, 0, 0.8);
-    }
-  }
-
+  border-radius: 0px;
+  background-color: rgb(0, 0, 0, 0.5);
+  opacity: 0.7;
+  transition: all 0.2s ease-out;
   ${Content2}:hover & {
-    left: 0rem;
+    background-color: rgb(0, 0, 0, 0.8);
   }
+}
+
+${Content2}:hover & {
+  left: 0rem;
+}
+@media only screen and (max-width: 602px) {
+  left: 0rem;
+}
+@media only screen and (max-width: 502px) {
+  left: -9rem;
+}
 `;
 export const Bg = styled.div`
 height: 60vh;

@@ -1,9 +1,10 @@
 import React from "react";
-import {  DgText, SmText } from "../../constants/style";
+import { DgText, SmText } from "../../constants/style";
 import styled from "styled-components";
 import fb from "../../images/fb.svg";
 import insta from "../../images/insta.svg";
 import wave from "../../images/wave.svg";
+import { COMPANY_NAME } from "../../constants/appConstants";
 
 const Foot = styled.div`
   background-image: url(${wave});
@@ -68,26 +69,26 @@ const Footer = () => {
         <div>
           <Content>
             <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
-              Event
+              {COMPANY_NAME}
             </DgText>
             <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
               &
             </DgText>
             <DgText center bold style={{ fontSize: "2rem", color: "#fff" }}>
-              Deco
+              Decorations
             </DgText>
           </Content>
           <Div></Div>
         </div>
         <Legal>
-          <SocialLink href='L'>
+          <SocialLink href="L">
             <SocialIcon src={fb} />
           </SocialLink>
-          <SocialLink href='L'>
+          <SocialLink href="L">
             <SocialIcon src={insta} />
           </SocialLink>
         </Legal>
-        <SmText white> © 2021 Events % Deco all rights reserved</SmText>
+        <SmText white> © 2021 {COMPANY_NAME} all rights reserved</SmText>
       </Container>
     </Foot>
   );

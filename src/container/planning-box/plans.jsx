@@ -9,7 +9,9 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   justify-items: center;
   padding: 0.5rem 0.4rem;
-  background: #473bf0;
+  background-color: #004777;
+// background: -webkit-linear-gradient(to top, #F7B53B, #004777 );  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to bottom , #F7B53B, #004777 90%); 
   grid-gap: 0.8rem;
   border-radius: 5px;
   position: relative;
@@ -45,7 +47,7 @@ const Div = styled.div`
     width: 6rem;
     position: absolute;
     background-color: #fff;
-    
+
     ${Container}:hover & {
       background-color: orange;
     }
@@ -71,6 +73,10 @@ const Icon = styled(EmojiNatureIcon)`
     color: orange;
   }
 `;
+const Md = styled(MdText)`
+${Container}:hover & {
+  color: orange;
+}`
 
 const Plans = ({ plan, info }) => {
   return (
@@ -78,7 +84,7 @@ const Plans = ({ plan, info }) => {
       <Ajust style={{ fontSize: "1rem" }} />
       <Content>
         <Icon style={{ fontSize: "3rem" }} />
-        <MdText white>{plan}</MdText>
+        <Md white>{plan}</Md>
         <Div></Div>
         <SmText white>{info}</SmText>
       </Content>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styled, {keyframes} from "styled-components";
 import TemporaryDrawer from "../drawer/drawer";
 import { AppBar } from "@material-ui/core";
+import { COMPANY_NAME } from "../../constants/appConstants";
 
 const blur =keyframes`
 0% {
@@ -63,25 +64,22 @@ const Navs = styled.div`
   }
 `;
 
-
-
 const Header = () => {
   return (
     <AppBar>
       <Container>
-        <Linkk to='/'>
+        <Linkk to="/">
           <DgText center style={{ fontWeight: "500", color: "#fff" }}>
-            Events and Deco
+            {COMPANY_NAME}
           </DgText>
         </Linkk>
         <Navs>
-          <Ltxt to='/' name='Home' />
-          <Ltxt to='/catering' name='Catering' />
-          <Ltxt to='/decoration' name='Decoration' />
-          <Ltxt to='/training' name='Training' />
-          <Ltxt to='/gallery' name='Gallery' />
-          <Ltxt to='/contact' name='Contact Us' />
-
+          <Ltxt to="/" name="Home" />
+          <Ltxt to="/catering" name="Catering" />
+          <Ltxt to="/decoration" name="Decoration" />
+          <Ltxt to="/training" name="Training" />
+          <Ltxt to="/gallery" name="Gallery" />
+          <Ltxt to="/contact" name="Contact Us" />
         </Navs>
         <TemporaryDrawer />
       </Container>

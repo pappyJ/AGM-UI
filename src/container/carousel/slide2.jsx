@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background-color: rgb(0, 0, 0, 0.5);
   display: grid;

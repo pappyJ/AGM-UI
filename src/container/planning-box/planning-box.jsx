@@ -17,7 +17,8 @@ grid-gap: .8rem;
     padding: 5rem 1rem;
   }`
 const Div = styled.div`
-background: #DEDEF8;
+
+
 background-image: url(${Img});
 background-position: center;
 background-repeat: no-repeat;
@@ -37,10 +38,10 @@ position: relative;
 }`
 
 const PlanningBox = () => {
-    const Data = [{"id":1,"plan":"Cloned","info":"Programmable bifurcated success","num":1},
-    {"id":2,"plan":"Face to face","info":"Reactive methodical circuit","num":2},
-    {"id":3,"plan":"Innovative","info":"Progressive cohesive structure","num":3},
-    {"id":4,"plan":"3rd generation","info":"Fundamental directional extranet","num":4},
+    const Data = [{"id":1,"plan":"Launching","info":"Programmable bifurcated success","num":1},
+    {"id":2,"plan":"Wedding","info":"Reactive methodical circuit","num":2},
+    {"id":3,"plan":"Birthday","info":"Progressive cohesive structure","num":3},
+    {"id":4,"plan":"Meeting","info":"Fundamental directional extranet","num":4},
     {"id":5,"plan":"task-force","info":"Polarised bifurcated policy","num":5},
     {"id":6,"plan":"Proactive","info":"Cloned explicit contingency","num":6}]
     return (
